@@ -2,19 +2,20 @@ import React from 'react';
 
 interface FormProps {
   inputValue: string,
-  addNewTask: React.ChangeEventHandler<HTMLInputElement>,
+  onInputChange: React.ChangeEventHandler<HTMLInputElement>,
   onButtonClick: React.MouseEventHandler
 }
 
-const AddTaskForm: React.FC<FormProps> = ({inputValue, addNewTask, onButtonClick}) => {
+const AddTaskForm: React.FC<FormProps> = ({inputValue, onInputChange, onButtonClick}) => {
   return (
-      <form className="formAddTask">
+      <div>
         <input type="text"
                placeholder="Add new task"
                value={inputValue}
-               onChange={addNewTask}/>
+               onChange={onInputChange}/>
         <button onClick={onButtonClick}>Add</button>
-      </form>
+      </div>
   );
+
 };
 export default AddTaskForm;
