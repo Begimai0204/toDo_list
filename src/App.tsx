@@ -38,7 +38,7 @@ function App() {
   };
   return (
       <div>
-        <h1>ToDO</h1>
+        <h1>ToDO ✔</h1>
         <AddTaskForm
             onButtonClick={addNewTask}
             onInputChange={handleInputChange}

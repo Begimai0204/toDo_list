@@ -8,7 +8,7 @@ interface FormProps {
 
 const AddTaskForm: React.FC<FormProps> = ({inputValue, onInputChange, onButtonClick}) => {
   return (
-      <div>
+      <div className="addTaskForm">
         <input type="text"
                placeholder="Add new task"
                value={inputValue}
